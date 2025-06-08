@@ -10,7 +10,8 @@ fetch(`${BASE_URL}/ticket`, {
     body: JSON.stringify(user)
 })
     .then(response => response.json())
-    .then(data => { console.log('Success:', data); 
+    .then(data => {
+        console.log('Success:', data);
         const ticket = data.response.serviceTicket;
         fs.writeFileSync(path.join(__dirname, '../ticket.json'), JSON.stringify({ serviceTicket: ticket }));
     })

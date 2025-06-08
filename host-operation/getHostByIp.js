@@ -1,7 +1,7 @@
-const {BASE_URL} = require('../config');
-const {getServiceTicket, ask} = require('../utils.js');
+const { BASE_URL } = require('../config');
+const { getServiceTicket, ask } = require('../utils.js');
 
-async function getHostByIp(){
+async function getHostByIp() {
     const serviceTicket = getServiceTicket();
     const hostIp = await ask('Enter the host IP address: ');
 
